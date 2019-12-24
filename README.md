@@ -11,8 +11,8 @@ Master branch contains **Selenium 3** samples, for **Selenium 4 - W3C protocol**
 * Update *.conf.json files inside the `src/test/resources/conf` directory with your [BrowserStack Username and Access Key](https://www.browserstack.com/accounts/settings). 
 
 ## Running your tests
-* To run the tests sequentially, keep the configuration parameter- 'junit.jupiter.execution.parallel.enabled' as 'false' and run `mvn test -P sample`
-* To run the tests in parallel, keep the configuration parameter- 'junit.jupiter.execution.parallel.enabled' as 'true' and run `mvn test -P sample`
+* To run single test, run `mvn test -P single`
+* To run the tests in parallel, keep the configuration parameter- 'junit.jupiter.execution.parallel.enabled' as 'true' and run `mvn test -P parallel`
 * To run local tests, run `mvn test -P local`
 
  Understand how many parallel sessions you need by using our [Parallel Test Calculator](https://www.browserstack.com/automate/parallel-calculator?ref=github)
