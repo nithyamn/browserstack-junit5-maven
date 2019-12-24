@@ -1,0 +1,29 @@
+{
+  "server": "hub-cloud.browserstack.com",
+  "user": "BROWSERSTACK_USERNAME",
+  "key": "BROWSERSTACK_ACCESS_KEY",
+
+  "capabilities": {
+    "build": "browserstack-maven-junit5",
+    "name": "parallel_test",
+    "browserstack.debug": true
+  },
+
+  "environments": [
+    {
+      "browser": "chrome"
+    },
+    {
+      "browser": "firefox"
+    },
+    {
+      "browser": "safari",
+      "os": "OS X",
+      "os_version": "Mojave",
+      "browser_version": "12.0"
+    },
+    {
+      "browser": "Internet Explorer"
+    }
+  ]
+}
