@@ -10,10 +10,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
-@Execution(ExecutionMode.CONCURRENT)
+@Execution(ExecutionMode.SAME_THREAD)
+//@Execution(ExecutionMode.CONCURRENT)
 public class AppiumAndroid extends BrowserStackAndroidTest {
-
-    @RepeatedTest(4)
+    
+    //Parallel testing: Increase the value of i depending on the number of parallel tests to be launched
+    final int i = 1;
+    @RepeatedTest(i)
     public void test() throws Exception {
         AndroidElement searchElement = (AndroidElement) new WebDriverWait(driver, 30).until(
                 ExpectedConditions.elementToBeClickable(MobileBy.AccessibilityId("Search Wikipedia")));
