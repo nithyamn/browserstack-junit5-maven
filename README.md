@@ -18,7 +18,7 @@ Master branch contains **Selenium 3** samples, for **Selenium 4 - W3C protocol**
     - To run android tests, run `mvn test -P android`
     - To run ios tests, run `mvn test -P ios`
     - To run appium tests in parallel,
-        - Comment @Execution(ExecutionMode.SAME_THREAD) and uncomment @Execution(ExecutionMode.CONCURRENT)
+        - Comment `@Execution(ExecutionMode.SAME_THREAD)` and uncomment `@Execution(ExecutionMode.CONCURRENT)`
         - Change the value of 'i' depending on the number of parallel tests to be launched
         - To run parallel test, run `mvn test -P appium_parallel`
 
@@ -29,9 +29,8 @@ Master branch contains **Selenium 3** samples, for **Selenium 4 - W3C protocol**
 junit.jupiter.execution.parallel.enabled = true
 junit.jupiter.execution.parallel.mode.default = concurrent
 ```
-
 * Add `@Execution(ExecutionMode.SAME_THREAD)` tag to a class or method that is to be run in parallel.
-* In this project `@RepeatedTest` is used to support parallel testing.
+* In this project `@RepeatedTest` tag is used to support parallel testing.
 
  Understand how many parallel sessions you need by using our [Parallel Test Calculator](https://www.browserstack.com/automate/parallel-calculator?ref=github)
 
