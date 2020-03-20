@@ -1,11 +1,9 @@
-# junit-browserstack
+# browserstack-junit5-maven
 [JUnit](https://junit.org/junit5/) Integration with BrowserStack.
 
 Master branch contains **Selenium 3** samples, for **Selenium 4 - W3C protocol** please checkout [selenium-4](https://github.com/browserstack/junit-browserstack/tree/selenium-4) branch
 
 ![BrowserStack Logo](https://d98b8t1nnulk5.cloudfront.net/production/images/layout/logo-header.png?1469004780) 
-
-![JUnit](https://junit.org/junit5/assets/img/junit5-logo.png)
 
 ## Setup
 * Clone the repo
@@ -13,8 +11,8 @@ Master branch contains **Selenium 3** samples, for **Selenium 4 - W3C protocol**
 * Update *.conf.json files inside the `src/test/resources/conf` directory with your [BrowserStack Username and Access Key](https://www.browserstack.com/accounts/settings). 
 
 ## Running your tests
-* To run the tests sequentially, keep the configuration parameter- 'junit.jupiter.execution.parallel.enabled' as 'false' and run `mvn test -P sample`
-* To run the tests in parallel, keep the configuration parameter- 'junit.jupiter.execution.parallel.enabled' as 'true' and run `mvn test -P sample`
+* To run single test, run `mvn test -P single`
+* To run the tests in parallel, keep the configuration parameter- 'junit.jupiter.execution.parallel.enabled' as 'true' and run `mvn test -P parallel`
 * To run local tests, run `mvn test -P local`
 
  Understand how many parallel sessions you need by using our [Parallel Test Calculator](https://www.browserstack.com/automate/parallel-calculator?ref=github)
@@ -34,4 +32,4 @@ Master branch contains **Selenium 3** samples, for **Selenium 4 - W3C protocol**
 * [Customizing your tests on BrowserStack](https://www.browserstack.com/automate/capabilities)
 * [Browsers & mobile devices for selenium testing on BrowserStack](https://www.browserstack.com/list-of-browsers-and-platforms?product=automate)
 * [Using REST API to access information about your tests via the command-line interface](https://www.browserstack.com/automate/rest-api)
-# browserstack-junit5-maven
+
