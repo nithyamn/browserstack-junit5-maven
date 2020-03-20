@@ -10,10 +10,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
-//@Execution(ExecutionMode.SAME_THREAD)
-public class AppiumAndroid extends BrowserStackAndroidTest {
+@Execution(ExecutionMode.CONCURRENT)
+public class ParallelAppiumTest extends BrowserStackAndroidTest {
 
-    final int i = 1;
+    //Parallel testing: Increase the value of i depending on the number of parallel tests to be launched
+    final int i = 4;
     @RepeatedTest(i)
     public void test() throws Exception {
         AndroidElement searchElement = (AndroidElement) new WebDriverWait(driver, 30).until(

@@ -219,7 +219,7 @@
                         <artifactId>maven-surefire-plugin</artifactId>
                         <configuration>
                             <includes>
-                                <include>com/browserstack/app/android/AppiumAndroid.java</include>
+                                <include>com/browserstack/app/android/ParallelAppiumTest.java</include>
                             </includes>
                             <systemPropertyVariables>
                                 <config>appium_parallel.conf.json</config>
