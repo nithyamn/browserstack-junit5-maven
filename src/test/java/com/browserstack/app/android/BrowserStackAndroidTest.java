@@ -1,9 +1,12 @@
-package com.browserstack;
+package com.browserstack.app.android;
 import com.browserstack.local.Local;
 
 import java.io.FileReader;
 import java.net.URL;
 import java.util.*;
+
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidElement;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONArray;
 import org.json.simple.parser.JSONParser;
@@ -21,8 +24,8 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import static org.junit.Assert.assertNotNull;
 
 
-public class BrowserStackJUnitTest {
-    public WebDriver driver;
+public class BrowserStackAndroidTest {
+    public AndroidDriver<AndroidElement> driver;
     private Local l;
 
     private static JSONObject config;
@@ -77,7 +80,7 @@ public class BrowserStackJUnitTest {
             options.put("key", accessKey);
             l.start(options);
         }
-        driver = new RemoteWebDriver(new URL("http://" + username + ":" + accessKey + "@" + config.get("server") + "/wd/hub"), capabilities);
+        driver = new AndroidDriver(new URL("http://"+username+":"+accessKey+"@"+config.get("server")+"/wd/hub"), capabilities);
     }
 
     @AfterEach

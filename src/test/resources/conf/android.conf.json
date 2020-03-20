@@ -1,0 +1,17 @@
+{
+  "server": "hub.browserstack.com",
+  "user": "BROWSERSTACK_USERNAME",
+  "key": "BROWSERSTACK_ACCESS_KEY",
+
+  "capabilities": {
+    "build": "browserstack-maven-junit5",
+    "name": "single_appium_test",
+    "browserstack.debug": true,
+    "app": "bs://ae210c1d04aa89db927c408f6d7da115303fba0d"
+  },
+
+  "environments": [{
+    "os_version": "9.0",
+    "device": "Google Pixel 3"
+  }]
+}

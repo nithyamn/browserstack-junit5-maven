@@ -1,0 +1,17 @@
+{
+  "server": "hub-cloud.browserstack.com",
+  "user": "BROWSERSTACK_USERNAME",
+  "key": "BROWSERSTACK_ACCESS_KEY",
+
+  "capabilities": {
+    "build": "browserstack-maven-junit5",
+    "name": "single_appium_test",
+    "browserstack.debug": true,
+    "app": "bs://07dc0a4af4567a7086a3c739b3b51f41a086e6a0"
+  },
+
+  "environments": [{
+    "device": "iPhone XS",
+    "os_version": "12"
+  }]
+}

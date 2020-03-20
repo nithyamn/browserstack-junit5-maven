@@ -1,9 +1,8 @@
-package com.browserstack;
+package com.browserstack.web;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.RepeatedTest;
-import org.junit.jupiter.api.Test;
 
 public class LocalTest extends BrowserStackJUnitTest {
 
