@@ -20,6 +20,7 @@ Master branch contains **Selenium 3** samples, for **Selenium 4 - W3C protocol**
     - To run appium tests in parallel,
         - Comment @Execution(ExecutionMode.SAME_THREAD) and uncomment @Execution(ExecutionMode.CONCURRENT)
         - Change the value of 'i' depending on the number of parallel tests to be launched
+        - To run parallel test, run `mvn test -P appium_parallel`
 
 ## Parallel execution in Junit 5
 * Add the following snippet to pom.xml as `configurationParameters` to enable parallel testing
